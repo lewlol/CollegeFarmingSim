@@ -5,7 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Tool")]
 public class Tool : ScriptableObject
 {
-    public int level;
+    [Header("Information")]
+    public string toolName;
     public GameObject prefab;
     public ToolType type;
+
+    [Header("General Stats")]
+    public int level;
+
+    [Header("Seed Stats")]
+    public CropType crop;
+    public GameObject cropPlot;
 }

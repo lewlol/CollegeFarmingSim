@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9747dc24fea232940be601b4283c1bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheatChance: 0.01
+  wheatChance: 0.001
   smallWheat: {fileID: 3699121052183022109}
   largeWheat: {fileID: 6422898073759671972}
 --- !u!65 &4063325577820102491

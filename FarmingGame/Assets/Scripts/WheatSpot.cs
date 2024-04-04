@@ -52,6 +52,7 @@ public class WheatSpot : MonoBehaviour
             if (isBig)
             {
                 WheatPickedUp();
+                PlayerManager.playerManager.CropPickup(CropType.Wheat);
             }
         }
     }

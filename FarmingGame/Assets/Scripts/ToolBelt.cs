@@ -6,6 +6,7 @@ public class ToolBelt : MonoBehaviour
 {
     public Tool axeTool;
     public Tool hoeTool;
+    public Tool seedTool;
 
     public Tool activeTool;
 
@@ -17,7 +18,9 @@ public class ToolBelt : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        ChangeTool();
+
+        if (Input.GetMouseButtonDown(0))
         {
             switch (activeTool.type)
             {
@@ -26,6 +29,9 @@ public class ToolBelt : MonoBehaviour
                     break;
                 case ToolType.Axe:
                     UseAxe();
+                    break;
+                case ToolType.Seedbag:
+                    UseSeedBag(); 
                     break;
             }
         }
@@ -50,5 +56,44 @@ public class ToolBelt : MonoBehaviour
     private void UseAxe()
     {
 
+    }
+
+    private void UseSeedBag()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, tile))
+        {
+            if (hit.transform.tag == "Tile")
+            {
+                Transform p = hit.transform.parent;
+                Transform parent = p.parent;
+
+                if(parent.transform.GetComponent<Tile>().isTilled == true && parent.transform.GetComponent<Tile>().hasCrops == false)
+                {
+                    parent.transform.GetComponent<Tile>().PlantCrops(activeTool.cropPlot);
+                    Debug.Log("Planted " + activeTool.crop.ToString());
+                }
+            }
+        }
+    }
+
+    private void ChangeTool()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            activeTool = hoeTool;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            activeTool = axeTool;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            activeTool = seedTool;
+        }
+
+        UIManager.uiManager.ToolChange(activeTool.type);
     }
 }

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 219e2ffbe8f1da54ea2f9be94d84ff19, type: 3}
+  m_Name: Jack
+  m_EditorClassIdentifier: 
+  visitorName: Jack
+  multipleCrops: 1
+  crops:
+  - {fileID: 11400000, guid: 00008e5cd168970438aefbb231a39596, type: 2}
+  - {fileID: 11400000, guid: 113a9a44a60e76b4bb54e3ce0446c92f, type: 2}
+  minTradeAmount: 14
+  maxTradeAmount: 65
+  generocity: 0
+  rarity: 1
