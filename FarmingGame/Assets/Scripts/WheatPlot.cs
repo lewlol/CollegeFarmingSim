@@ -4,27 +4,43 @@ using UnityEngine;
 
 public class WheatPlot : MonoBehaviour
 {
-    public GameObject wheatSpot;
     [Range(0, 1)] public float wheatChance;
 
-    private void GrowWheat()
+    public GameObject smallWheat;
+    public GameObject largeWheat;
+    private void Awake()
     {
-        //Choose Wheat Spot
+        TickEvent.tickEvent.OnTick += GrowWheat;   
+    }
+    public void GrowWheat()
+    {
+        //Attempt the Growth
+        float wc = Random.Range(0, 1);
+        if(wc <= wheatChance)
+        {
+            //Disable Small Wheat 
+            smallWheat.SetActive(false);
 
+            //Enable Big Wheat
+            largeWheat.SetActive(true);
 
-        //Disable Small Wheat 
-
-
-        //Enable Big Wheat
-
-
+        }
     }
 
     public void WheatPickedUp()
     {
         //Disable Big Wheat
-
+        largeWheat.SetActive(false);
 
         //Enable Small Wheat
+        smallWheat.SetActive(true);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            WheatPickedUp();
+        }
     }
 }
