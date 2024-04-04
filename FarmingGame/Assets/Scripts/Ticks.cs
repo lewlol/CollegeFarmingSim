@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ticks : MonoBehaviour
 {
-    public int tickSpeed;
+    public float tickSpeed;
     float c;
 
     private void Start()
