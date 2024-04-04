@@ -18,7 +18,7 @@ public class Ticks : MonoBehaviour
         if (countDown <= 0) 
         {
             //Tick Happened
-            TickEvent.tickEvent.Tick();
+            TickManager.tickManager.TickEvent();
             c = tickSpeed;
         }
     }
