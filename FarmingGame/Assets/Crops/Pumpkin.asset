@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cropName: Pumpkin
   cropType: 3
+  cropSprite: {fileID: 21300000, guid: 29bd0d5f978d5234089e9b5bfed9d479, type: 3}
   cropPrice: 2
   cropPoints: 3

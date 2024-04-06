@@ -115,7 +115,7 @@ public class VisitorStand : MonoBehaviour
 
     public void OpenMenu()
     {
-        UIManager.uiManager.OpenVisitorMenu(cd.cropName, askAmount, coinReward, pointsReward);
+        UIManager.uiManager.OpenVisitorMenu(cd.cropName, askAmount, coinReward, pointsReward, cd.cropSprite);
     }
 
     private void OnTriggerEnter(Collider other)

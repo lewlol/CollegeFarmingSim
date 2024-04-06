@@ -15,6 +15,7 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         PlayerManager.playerManager.OnCropPickup += AddCrops;
+        UIManager.uiManager.UpdateInventoryUI(wheat, pumpkin, carrot);
     }
     public void AddCrops(CropType ct)
     {
@@ -46,6 +47,7 @@ public class Inventory : MonoBehaviour
                 break;
         }
 
+        UIManager.uiManager.UpdateInventoryUI(wheat, pumpkin, carrot); 
         fortuneBonus = 0;
     }
 

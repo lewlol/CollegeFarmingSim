@@ -38,12 +38,12 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public event Action<string, int, int, int> OnOpenVisitorMenu;
-    public void OpenVisitorMenu(string cropName, int askAmount, int coinReward, int pointsReward)
+    public event Action<string, int, int, int, Sprite> OnOpenVisitorMenu;
+    public void OpenVisitorMenu(string cropName, int askAmount, int coinReward, int pointsReward, Sprite cropImage)
     {
         if(OnOpenVisitorMenu != null)
         {
-            OnOpenVisitorMenu(cropName, askAmount, coinReward, pointsReward);
+            OnOpenVisitorMenu(cropName, askAmount, coinReward, pointsReward, cropImage);
         }
     }
 
@@ -53,6 +53,15 @@ public class UIManager : MonoBehaviour
         if(OnCloseVisitorMenu != null)
         {
             OnCloseVisitorMenu();
+        }
+    }
+
+    public event Action<float, float, float> OnUpdateInventoryUI;
+    public void UpdateInventoryUI(float wheat, float pumpkin, float carrot)
+    {
+        if(OnUpdateInventoryUI != null)
+        {
+            OnUpdateInventoryUI(wheat, pumpkin, carrot);
         }
     }
 }

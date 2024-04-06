@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cropName: Potato
   cropType: 4
+  cropSprite: {fileID: -2895884961622119104, guid: 69d1d65579a91b54aa86b185eea1e138,
+    type: 3}
   cropPrice: 2
   cropPoints: 4
