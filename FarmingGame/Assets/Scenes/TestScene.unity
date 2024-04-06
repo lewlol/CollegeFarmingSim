@@ -328,7 +328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64923791}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19223578, y: -0.31505373, z: 0.06532675, w: 0.92710245}
+  m_LocalRotation: {x: 0.19223578, y: -0.31505373, z: 0.065326765, w: 0.9271025}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2560,7 +2560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793462069}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17534046, y: -0.3161899, z: 0.059585296, w: 0.9304458}
+  m_LocalRotation: {x: 0.17534044, y: -0.31618986, z: 0.059585292, w: 0.9304458}
   m_LocalPosition: {x: -3.888514, y: 6.2, z: -3.7053657}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3193,7 +3193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889522746}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17534047, y: -0.3161899, z: 0.05958528, w: 0.9304458}
+  m_LocalRotation: {x: 0.17534046, y: -0.3161899, z: 0.059585284, w: 0.9304458}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4850,6 +4850,7 @@ GameObject:
   - component: {fileID: 1656217446}
   - component: {fileID: 1656217448}
   - component: {fileID: 1656217447}
+  - component: {fileID: 1656217449}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4976,6 +4977,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: 0
+--- !u!114 &1656217449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656217441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6f72255c94d94a499eda0d7359d673c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  farmingFortune: 427
 --- !u!1 &1695932836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d499d84147a630e4683e20496219cfc2,
@@ -5565,10 +5580,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
