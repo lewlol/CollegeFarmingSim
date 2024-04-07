@@ -15,6 +15,7 @@ public class Tile : MonoBehaviour
     public bool isWater;
 
     public bool hasCrops;
+    public bool isUnlocked;
     private void Start()
     {
         isGrass = true;

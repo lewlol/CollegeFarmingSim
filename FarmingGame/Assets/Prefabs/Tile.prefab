@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 4.998, y: 1, z: 4.998}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5477209396378551454}
@@ -52,6 +52,11 @@ MonoBehaviour:
   tilledTile: {fileID: 594133314978373734}
   sandTile: {fileID: 4981972580374832872}
   waterTile: {fileID: 2032880888708234153}
+  isGrass: 0
+  isTilled: 0
+  isSand: 0
+  isWater: 0
+  hasCrops: 0
 --- !u!1001 &360183292182388023
 PrefabInstance:
   m_ObjectHideFlags: 0
