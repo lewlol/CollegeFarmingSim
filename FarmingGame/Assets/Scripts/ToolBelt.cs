@@ -6,11 +6,12 @@ public class ToolBelt : MonoBehaviour
 {
     public Tool axeTool;
     public Tool hoeTool;
-    public Tool seedTool;
+    public Tool[] seedTool;
 
     public Tool activeTool;
 
     public LayerMask tile;
+    int currentSeed;
 
     private void Start()
     {
@@ -34,6 +35,30 @@ public class ToolBelt : MonoBehaviour
                     UseSeedBag(); 
                     break;
             }
+        }
+
+        if(activeTool.type == ToolType.Seedbag)
+        {
+            if(Input.GetAxis("Mouse ScrollWheel") > 0f)
+            {
+                currentSeed++;
+                if(currentSeed >= seedTool.Length) 
+                {
+                    currentSeed = 0;
+                }
+                activeTool = seedTool[currentSeed];
+            }
+
+            if(Input.GetAxis("Mouse ScrollWheel") < 0f)
+            {
+                currentSeed--;
+                if(currentSeed < 0)
+                { 
+                    currentSeed = seedTool.Length - 1;
+                }
+                activeTool = seedTool[currentSeed];
+            }
+            UIManager.uiManager.ToolChange(activeTool.type); 
         }
     }
 
@@ -93,7 +118,7 @@ public class ToolBelt : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            activeTool = seedTool;
+            activeTool = seedTool[currentSeed];
         }
 
         UIManager.uiManager.ToolChange(activeTool.type);

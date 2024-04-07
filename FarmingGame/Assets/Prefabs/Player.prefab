@@ -338,7 +338,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axeTool: {fileID: 11400000, guid: e12f89e21955f8f43b5085d8c6094439, type: 2}
   hoeTool: {fileID: 11400000, guid: 6d5d112664de5ee4d9229d2161341bc5, type: 2}
-  seedTool: {fileID: 11400000, guid: 16ec98199eb96f34e978aafe63e1a4f4, type: 2}
+  seedTool:
+  - {fileID: 11400000, guid: 0d0c83077d4d4f447bb24f540481b6ad, type: 2}
+  - {fileID: 11400000, guid: bd8e1b2f750d78643a91eb89a081edca, type: 2}
+  - {fileID: 11400000, guid: 68bea787e951aa2449bdc8e857b002db, type: 2}
   activeTool: {fileID: 0}
   tile:
     serializedVersion: 2
