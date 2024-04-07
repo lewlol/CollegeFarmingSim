@@ -14,6 +14,7 @@ public class InventoryUI : MonoBehaviour
     private void Awake()
     {
         UIManager.uiManager.OnUpdateInventoryUI += UpdateUI;
+        UIManager.uiManager.OnOpenVisitorMenu += ForceInvClose;
     }
     public void UpdateUI(float wheat, float pumpkin, float carrot)
     {
@@ -24,10 +25,17 @@ public class InventoryUI : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !UIManager.uiManager.visitorTradeOpen)
         {
             bool i = ui.activeSelf;
             ui.SetActive(!i);
+
+            UIManager.uiManager.inventoryOpen = !i;
         }
+    }
+
+    public void ForceInvClose(string f, int a, int b, int c, Sprite d)
+    {
+        ui.SetActive(false);
     }
 }

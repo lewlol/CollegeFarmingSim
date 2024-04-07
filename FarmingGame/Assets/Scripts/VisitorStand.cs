@@ -116,6 +116,7 @@ public class VisitorStand : MonoBehaviour
     public void OpenMenu()
     {
         UIManager.uiManager.OpenVisitorMenu(cd.cropName, askAmount, coinReward, pointsReward, cd.cropSprite);
+        UIManager.uiManager.visitorTradeOpen = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -132,6 +133,7 @@ public class VisitorStand : MonoBehaviour
         {
             inRadius = false;
             UIManager.uiManager.CloseVisitorMenu();
+            UIManager.uiManager.visitorTradeOpen = false;
         }
     }
 
@@ -184,6 +186,9 @@ public class VisitorStand : MonoBehaviour
 
             //Reset Visitor
             ResetVisitor();
+
+            //Menu Close State Machine
+            UIManager.uiManager.visitorTradeOpen = false;
         }
     }
 
@@ -193,6 +198,8 @@ public class VisitorStand : MonoBehaviour
 
         //Reset Visitor
         ResetVisitor();
+
+        UIManager.uiManager.visitorTradeOpen = false;
     }
 
     public void ResetVisitor()

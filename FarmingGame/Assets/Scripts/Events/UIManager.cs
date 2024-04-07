@@ -6,6 +6,11 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public static UIManager uiManager;
+
+    //UI State Machine
+    public bool inventoryOpen;
+    public bool visitorTradeOpen;
+
     private void Awake()
     {
         uiManager = this;
