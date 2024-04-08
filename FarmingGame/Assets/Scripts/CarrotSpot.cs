@@ -46,7 +46,7 @@ public class CarrotSpot : MonoBehaviour
             if (isBig)
             {
                 CarrotPickedUp();
-                PlayerManager.playerManager.CropPickup(CropType.Carrot);
+                PlayerManager.playerManager.CropPickup(CropType.Carrot, transform.position);
             }
         }
     }

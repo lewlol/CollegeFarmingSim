@@ -43,7 +43,7 @@ public class PumpkinSpot : MonoBehaviour
             if (isBig)
             {
                 PumpkinPickup();
-                PlayerManager.playerManager.CropPickup(CropType.Pumpkin);
+                PlayerManager.playerManager.CropPickup(CropType.Pumpkin, transform.position);
             }
         }
     }

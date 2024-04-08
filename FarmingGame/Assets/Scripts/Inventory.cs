@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
         PlayerManager.playerManager.OnCropPickup += AddCrops;
         UIManager.uiManager.UpdateInventoryUI(wheat, pumpkin, carrot);
     }
-    public void AddCrops(CropType ct)
+    public void AddCrops(CropType ct, Vector3 pos)
     {
         //Every 100 Fortune = +1 Drop Confirmed
         int fortune = PlayerStats.playerStats.farmingFortune;

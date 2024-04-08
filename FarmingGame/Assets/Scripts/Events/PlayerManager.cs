@@ -12,12 +12,12 @@ public class PlayerManager : MonoBehaviour
         playerManager = this;
     }
 
-    public event Action<CropType> OnCropPickup;
-    public void CropPickup(CropType ct)
+    public event Action<CropType, Vector3> OnCropPickup;
+    public void CropPickup(CropType ct, Vector3 pos)
     {
         if(OnCropPickup != null)
         {
-            OnCropPickup(ct);
+            OnCropPickup(ct, pos);
         }
     }
 
