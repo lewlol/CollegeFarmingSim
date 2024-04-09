@@ -8,6 +8,8 @@ public class CritterAI : MonoBehaviour
     public float searchCropRadius;
     public float eatRadius;
 
+    public CritterData cd;
+    CharacterController charcontrol;
     GameObject player;
     GameObject crop;
 
@@ -15,28 +17,39 @@ public class CritterAI : MonoBehaviour
     public bool isSearchingForCrop;
     public bool isEatingCrop;
 
+    float cropDistance;
     private void Awake()
     {
         player = GameObject.Find("Player");
+        charcontrol = GetComponent<CharacterController>();
     }
     private void Update()
     {
         float playerDistance = Vector3.Distance(transform.position, player.transform.position);
-        float cropDistance = Vector3.Distance(transform.position, crop.transform.position);
+
+        if(crop != null)
+            cropDistance = Vector3.Distance(transform.position, crop.transform.position);
 
         if (playerDistance < runRadius && !isRunningFromPlayer)
-            RunFromPlayer();
+            RunFromPlayer(playerDistance);
         else if(playerDistance > searchCropRadius && !isRunningFromPlayer && !isEatingCrop)
             SearchForCrop();
 
         if(cropDistance <= eatRadius && !isRunningFromPlayer && !isSearchingForCrop && !isEatingCrop)
             EatCrop();
     }
-    private void RunFromPlayer()
+    private void RunFromPlayer(float playerDistance)
     {
+        Debug.Log("Running from Player");
         isRunningFromPlayer = true;
 
-        //Run Away from the Player
+        Vector3 moveDir = transform.position = player.transform.position;
+        charcontrol.Move(moveDir * cd.critterSpeed * Time.deltaTime);
+
+        if(playerDistance > searchCropRadius)
+        {
+            isRunningFromPlayer = false;
+        }
     }
 
     private void SearchForCrop()

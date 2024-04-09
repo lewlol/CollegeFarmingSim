@@ -7058,6 +7058,7 @@ GameObject:
   - component: {fileID: 1338964516}
   - component: {fileID: 1338964515}
   - component: {fileID: 1338964514}
+  - component: {fileID: 1338964519}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -7080,6 +7081,7 @@ MonoBehaviour:
   runRadius: 5
   searchCropRadius: 15
   eatRadius: 2
+  cd: {fileID: 11400000, guid: 003ef067c6fb1bb4686c8e43193c8fe3, type: 2}
   isRunningFromPlayer: 0
   isSearchingForCrop: 0
   isEatingCrop: 0
@@ -7163,12 +7165,38 @@ Transform:
   m_GameObject: {fileID: 1338964513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.79, y: 0, z: -4.41}
+  m_LocalPosition: {x: -15.79, y: 0.5, z: -4.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &1338964519
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338964513}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1341512019
 PrefabInstance:
   m_ObjectHideFlags: 0
