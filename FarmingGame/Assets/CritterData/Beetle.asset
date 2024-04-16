@@ -15,6 +15,6 @@ MonoBehaviour:
   critterName: Beetle
   critterDescription: 
   critterPrefab: {fileID: 0}
-  critterSpeed: 5
+  critterSpeed: 2
   critterAI: 0
   critterCrop: 4

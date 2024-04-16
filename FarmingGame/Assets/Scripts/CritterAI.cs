@@ -13,11 +13,6 @@ public class CritterAI : MonoBehaviour
     GameObject player;
     GameObject crop;
 
-    public bool isRunningFromPlayer;
-    public bool isSearchingForCrop;
-    public bool isEatingCrop;
-
-    float cropDistance;
     private void Awake()
     {
         player = GameObject.Find("Player");
@@ -27,45 +22,26 @@ public class CritterAI : MonoBehaviour
     {
         float playerDistance = Vector3.Distance(transform.position, player.transform.position);
 
-        if(crop != null)
-            cropDistance = Vector3.Distance(transform.position, crop.transform.position);
-
-        if (playerDistance < runRadius && !isRunningFromPlayer)
-            RunFromPlayer(playerDistance);
-        else if(playerDistance > searchCropRadius && !isRunningFromPlayer && !isEatingCrop)
-            SearchForCrop();
-
-        if(cropDistance <= eatRadius && !isRunningFromPlayer && !isSearchingForCrop && !isEatingCrop)
-            EatCrop();
-    }
-    private void RunFromPlayer(float playerDistance)
-    {
-        Debug.Log("Running from Player");
-        isRunningFromPlayer = true;
-
-        Vector3 moveDir = transform.position = player.transform.position;
-        charcontrol.Move(moveDir * cd.critterSpeed * Time.deltaTime);
-
-        if(playerDistance > searchCropRadius)
+        if (playerDistance < runRadius)
         {
-            isRunningFromPlayer = false;
+            RunFromPlayer();
+        }else if(playerDistance > runRadius && playerDistance < searchCropRadius)
+        {
+            SearchForCrop();
         }
+    }
+    private void RunFromPlayer()
+    {
+        transform.rotation = Quaternion.LookRotation(transform.position - player.transform.position);
+        charcontrol.Move(transform.forward * cd.critterSpeed * Time.deltaTime);
     }
 
     private void SearchForCrop()
     {
-        isSearchingForCrop = true;
-
-        //Scan for a Nearby Crop in the Radius
-
-        //Move to that Crop
     }
 
     private void EatCrop()
     {
-        isEatingCrop = true;
-
-        //Eat the Crop when in radius
     }
 
 
