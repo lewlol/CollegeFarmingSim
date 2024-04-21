@@ -71,10 +71,13 @@ public class ToolBelt : MonoBehaviour
             {
                 Transform p = hit.transform.parent;
                 Transform parent = p.parent;
-                if (parent.transform.GetComponent<Tile>().isUnlocked)
+                if (parent.transform.GetComponent<Tile>() != null)
                 {
-                    parent.transform.GetComponent<Tile>().TillTile();
-                    Debug.Log("Hit Tile");
+                    if (parent.transform.GetComponent<Tile>().isUnlocked)
+                    {
+                        parent.transform.GetComponent<Tile>().TillTile();
+                        Debug.Log("Hit Tile");
+                    }
                 }
             }
         }

@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1737288764323250203}
   - component: {fileID: 5230203006958768333}
+  - component: {fileID: 1977301388042758890}
   m_Layer: 0
   m_Name: FreeLook Camera
   m_TagString: Untagged
@@ -283,7 +284,7 @@ MonoBehaviour:
   m_YAxis:
     Value: 0.5
     m_SpeedMode: 0
-    m_MaxSpeed: 0
+    m_MaxSpeed: 150
     m_AccelTime: 0.2
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -346,6 +347,19 @@ MonoBehaviour:
   - {fileID: 7906943833491399866}
   - {fileID: 8200467678573439635}
   - {fileID: -6078736547077158118}
+--- !u!114 &1977301388042758890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3983816824654920823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5cc4beaac5d2f4a86fb93d908023f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cfl: {fileID: 5230203006958768333}
 --- !u!1 &4794011356331827191
 GameObject:
   m_ObjectHideFlags: 3
