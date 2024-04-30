@@ -17,12 +17,12 @@ public class UIManager : MonoBehaviour
         uiManager = this;
     }
 
-    public event Action<ToolType> OnToolChange;
-    public void ToolChange(ToolType tt)
+    public event Action<ToolType, string> OnToolChange;
+    public void ToolChange(ToolType tt, string cropName)
     {
         if (OnToolChange != null)
         {
-            OnToolChange(tt);
+            OnToolChange(tt, cropName);
         }
     }
 

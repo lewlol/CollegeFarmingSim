@@ -47,6 +47,8 @@ public class ToolBelt : MonoBehaviour
                     currentSeed = 0;
                 }
                 activeTool = seedTool[currentSeed];
+
+                UIManager.uiManager.ToolChange(activeTool.type, activeTool.crop.ToString());
             }
 
             if(Input.GetAxis("Mouse ScrollWheel") < 0f)
@@ -58,7 +60,7 @@ public class ToolBelt : MonoBehaviour
                 }
                 activeTool = seedTool[currentSeed];
             }
-            UIManager.uiManager.ToolChange(activeTool.type); 
+            UIManager.uiManager.ToolChange(activeTool.type, activeTool.crop.ToString()); 
         }
     }
 
@@ -124,6 +126,6 @@ public class ToolBelt : MonoBehaviour
             activeTool = seedTool[currentSeed];
         }
 
-        UIManager.uiManager.ToolChange(activeTool.type);
+        UIManager.uiManager.ToolChange(activeTool.type, activeTool.crop.ToString());
     }
 }

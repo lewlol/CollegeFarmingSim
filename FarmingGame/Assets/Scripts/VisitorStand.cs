@@ -71,15 +71,21 @@ public class VisitorStand : MonoBehaviour
 
     private void CheckRarity(Rarity rarity)
     {
+        //Run a random visitor
         int randomVisitor = Random.Range(0, visitors.Length);
+
+        //Check the Rarity
         if (visitors[randomVisitor].rarity != rarity)
         {
-            CheckRarity(rarity);
+            CheckRarity(rarity); //Redo if the rarity is not correct
         }
+
+        //If true, set the chosen visitor as the active visitor
         activeVisitor = visitors[randomVisitor];
     }
     private void SetTrade()
     {
+        //Check if the visitor can ask for multiple crops and choose a crop
         if (activeVisitor.multipleCrops)
         {
             int ranCrop = Random.Range(0, activeVisitor.crops.Length);
@@ -87,11 +93,14 @@ public class VisitorStand : MonoBehaviour
         }
         else
         {
+            //If not set their desired crop
             cd = activeVisitor.crops[0];
         }
 
+        //Randomise their asking amount of crops
         askAmount = Random.Range(activeVisitor.minTradeAmount, activeVisitor.maxTradeAmount);
 
+        //Rewards set for when accepting the trade
         coinReward = askAmount * cd.cropPrice;
         pointsReward = askAmount * cd.cropPoints;
 
