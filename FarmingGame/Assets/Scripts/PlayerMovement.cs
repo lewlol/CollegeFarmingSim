@@ -8,12 +8,14 @@ public class PlayerMovement : MonoBehaviour
     Transform cam;
 
     public float speed;
+    float finalSpeed;
 
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     Vector3 moveDir;
 
     public Animator animator;
+    bool running;
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -28,13 +30,25 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
+        Run();
+
         if(direction != Vector3.zero)
         {
             animator.SetBool("isWalking", true);
+
+            if (running)
+            {
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+            }
         }
         else
         {
             animator.SetBool("isWalking", false);
+            animator.SetBool("isRunning", false);
         }
 
         if (direction.magnitude >= 0.1f)
@@ -43,8 +57,28 @@ public class PlayerMovement : MonoBehaviour
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
+            if (running)
+            {
+                finalSpeed = speed * 1.5f;
+            }
+            else
+            {
+                finalSpeed = speed;
+            }
             moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            controller.Move(moveDir.normalized * finalSpeed * Time.deltaTime);
+        }
+    }
+
+    private void Run()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            running = true;
+        }
+        else
+        {
+            running = false;
         }
     }
 }

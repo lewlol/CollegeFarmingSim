@@ -6,9 +6,21 @@ public class LaptopMenu : MonoBehaviour
 {
     public GameObject laptopUI;
 
-    public void SetUI()
+    private void Update()
     {
-        bool i = laptopUI.activeSelf;
-        laptopUI.SetActive(!i);
+        if (UIManager.uiManager.canOpenLaptop)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                laptopUI.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+            }
+        }
+    }
+
+    public void TurnOffUI()
+    {
+        laptopUI.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

@@ -9,6 +9,8 @@ public class Tile : MonoBehaviour
     public GameObject sandTile;
     public GameObject waterTile;
 
+    public GameObject nature;
+
     public bool isGrass;
     public bool isTilled;
     public bool isSand;
@@ -39,6 +41,13 @@ public class Tile : MonoBehaviour
         isSand = false;
         isWater = false;
 
+        GuideIcon();
+    }
+
+    public void ClearPlot()
+    {
+        isUnlocked = true;
+        nature.SetActive(false);
         GuideIcon();
     }
 

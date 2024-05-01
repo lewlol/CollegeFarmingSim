@@ -21,13 +21,16 @@ public class VisitorUI : MonoBehaviour
 
     public void SetTrade(string cropName, int aa, int cr, int pr, Sprite ci)
     {
-        UI.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
+        if (UIManager.uiManager.canOpenTrade)
+        {
+            UI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
 
-        cropImage.sprite = ci;
-        askAmount.text = aa.ToString() + " " + cropName;
-        coinReward.text = cr.ToString() + " Coins";
-        pointsReward.text = pr.ToString() + " Farm Points";
+            cropImage.sprite = ci;
+            askAmount.text = aa.ToString() + " " + cropName;
+            coinReward.text = cr.ToString() + " Coins";
+            pointsReward.text = pr.ToString() + " Farm Points";
+        }
     }
 
     public void SetUI() 

@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Katie
   m_EditorClassIdentifier: 
   visitorName: Katie
+  visitorMat: {fileID: 2100000, guid: 8fc308de1bd46f9449788eeb3fd0f1c9, type: 2}
+  generocity: 0
+  rarity: 2
+  farmPointsUnlocked: 0
   multipleCrops: 1
   crops:
   - {fileID: 11400000, guid: 00008e5cd168970438aefbb231a39596, type: 2}
@@ -20,5 +24,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 439cb4f0f95bd2c48b6100176ca11763, type: 2}
   minTradeAmount: 16
   maxTradeAmount: 54
-  generocity: 0
-  rarity: 2

@@ -252,6 +252,7 @@ MonoBehaviour:
   tilledTile: {fileID: 594133314978373734}
   sandTile: {fileID: 4981972580374832872}
   waterTile: {fileID: 2032880888708234153}
+  nature: {fileID: 2750146096540055746}
   isGrass: 0
   isTilled: 0
   isSand: 0

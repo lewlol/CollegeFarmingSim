@@ -24,7 +24,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
+    importConstraints: 1
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -78,7 +78,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - 3953ec772d4093747b4d8eb4f5e4dfad
+  - 3a6dd2bcb1fc77d4f9bb25d75ec8fd87
+  - 1e841498480a9d743bc2bb36994f74c7
   importAnimation: 0
   humanDescription:
     serializedVersion: 3

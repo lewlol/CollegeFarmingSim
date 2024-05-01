@@ -26,18 +26,15 @@ public class InventoryUI : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !UIManager.uiManager.visitorTradeOpen)
+        if (Input.GetKeyDown(KeyCode.E) && UIManager.uiManager.canOpenInventory)
         {
             bool i = ui.activeSelf;
             ui.SetActive(!i);
-
-            UIManager.uiManager.inventoryOpen = !i;
         }
     }
 
     public void ForceInvClose(string f, int a, int b, int c, Sprite d)
     {
         ui.SetActive(false);
-        UIManager.uiManager.inventoryOpen = false;
     }
 }

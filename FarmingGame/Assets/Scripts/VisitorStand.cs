@@ -11,8 +11,11 @@ public class VisitorStand : MonoBehaviour
     public VisitorData[] visitors;
     public VisitorData activeVisitor;
 
+    public GameObject visitorPrefab;
+    public Transform visitorLocation;
+    GameObject currentVisitorObject;
+
     bool isAvailable;
-    bool inRadius;
 
     //Trade Stuff
     CropData cd;
@@ -42,7 +45,7 @@ public class VisitorStand : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && inRadius && !isAvailable)
+        if (Input.GetKeyDown(KeyCode.E) && UIManager.uiManager.canOpenTrade && !isAvailable)
         {
             OpenMenu();
         }
@@ -117,7 +120,8 @@ public class VisitorStand : MonoBehaviour
         SetTrade();
 
         //Spawn Visitor Model
-
+        currentVisitorObject = Instantiate(visitorPrefab, visitorLocation.position, new Quaternion(0, 90, 0, 0));
+        currentVisitorObject.GetComponentInChildren<SkinnedMeshRenderer>().material = activeVisitor.visitorMat;
 
         //Visitor Generocity Offset (DO THIS LATER WITH VISITOR lOGBOOK AND TRACKING VISITOR TRADED TIMES)
     }
@@ -125,14 +129,14 @@ public class VisitorStand : MonoBehaviour
     public void OpenMenu()
     {
         UIManager.uiManager.OpenVisitorMenu(cd.cropName, askAmount, coinReward, pointsReward, cd.cropSprite);
-        UIManager.uiManager.visitorTradeOpen = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            inRadius = true;
+            UIManager.uiManager.canOpenTrade = true;
+            UIManager.uiManager.canOpenInventory = false;
         }
     }
 
@@ -140,9 +144,10 @@ public class VisitorStand : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            inRadius = false;
+            UIManager.uiManager.canOpenTrade = false;
+            UIManager.uiManager.canOpenInventory = true;
+
             UIManager.uiManager.CloseVisitorMenu();
-            UIManager.uiManager.visitorTradeOpen = false;
         }
     }
 
@@ -196,8 +201,8 @@ public class VisitorStand : MonoBehaviour
             //Reset Visitor
             ResetVisitor();
 
-            //Menu Close State Machine
-            UIManager.uiManager.visitorTradeOpen = false;
+            //Remove Model
+            Destroy(currentVisitorObject);
         }
     }
 
@@ -208,7 +213,8 @@ public class VisitorStand : MonoBehaviour
         //Reset Visitor
         ResetVisitor();
 
-        UIManager.uiManager.visitorTradeOpen = false;
+        //Remove Model
+        Destroy(currentVisitorObject);
     }
 
     public void ResetVisitor()

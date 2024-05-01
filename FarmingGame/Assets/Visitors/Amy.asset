@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Amy
   m_EditorClassIdentifier: 
   visitorName: Amy
+  visitorMat: {fileID: 2100000, guid: 8fc308de1bd46f9449788eeb3fd0f1c9, type: 2}
+  generocity: 0
+  rarity: 0
+  farmPointsUnlocked: 0
   multipleCrops: 0
   crops:
   - {fileID: 11400000, guid: efec4833d768189468cb4a508f445894, type: 2}
   minTradeAmount: 5
   maxTradeAmount: 36
-  generocity: 0

@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Ella
   m_EditorClassIdentifier: 
   visitorName: Ella
+  visitorMat: {fileID: 2100000, guid: 8fc308de1bd46f9449788eeb3fd0f1c9, type: 2}
+  generocity: 0
+  rarity: 0
+  farmPointsUnlocked: 0
   multipleCrops: 1
   crops:
   - {fileID: 11400000, guid: efec4833d768189468cb4a508f445894, type: 2}
   - {fileID: 11400000, guid: 00008e5cd168970438aefbb231a39596, type: 2}
   minTradeAmount: 2
   maxTradeAmount: 18
-  generocity: 0

@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Connor
   m_EditorClassIdentifier: 
   visitorName: Connor
+  visitorMat: {fileID: 2100000, guid: 8fc308de1bd46f9449788eeb3fd0f1c9, type: 2}
+  generocity: -5
+  rarity: 3
+  farmPointsUnlocked: 0
   multipleCrops: 0
   crops:
   - {fileID: 11400000, guid: 439cb4f0f95bd2c48b6100176ca11763, type: 2}
   minTradeAmount: 50
   maxTradeAmount: 175
-  generocity: -5
-  rarity: 3

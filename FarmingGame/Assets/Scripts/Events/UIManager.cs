@@ -8,9 +8,9 @@ public class UIManager : MonoBehaviour
     public static UIManager uiManager;
 
     //UI State Machine
-    public bool inventoryOpen;
-    public bool visitorTradeOpen;
-    public bool laptopOpen;
+    public bool canOpenInventory;
+    public bool canOpenLaptop;
+    public bool canOpenTrade;
 
     private void Awake()
     {

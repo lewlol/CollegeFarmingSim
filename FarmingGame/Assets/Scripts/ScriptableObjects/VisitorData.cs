@@ -7,6 +7,7 @@ public class VisitorData : ScriptableObject
 {
     [Header("Information")]
     public string visitorName;
+    public Material visitorMat;
 
     [Header("Visitor Stats")]
     public float generocity;
