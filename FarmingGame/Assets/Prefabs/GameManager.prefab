@@ -74,9 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e9fa0362944e540ad82976cb8eede4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryOpen: 0
-  visitorTradeOpen: 0
-  laptopOpen: 0
+  canOpenInventory: 0
+  canOpenLaptop: 0
+  canOpenTrade: 0
 --- !u!114 &4069057160530472784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a9eb9263bb262d4ab00c81f29411d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  critterChance: 0.1
+  critterChance: 0.001
   critters:
   - {fileID: 11400000, guid: 003ef067c6fb1bb4686c8e43193c8fe3, type: 2}
   - {fileID: 11400000, guid: 996678c6e8481bc40b4624eed5c7543e, type: 2}
@@ -120,3 +120,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62e7f573dea9ce40b449c185ec2c417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plotPrice: 0
+  price: {fileID: 0}
