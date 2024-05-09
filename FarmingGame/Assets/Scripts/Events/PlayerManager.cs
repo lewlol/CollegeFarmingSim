@@ -56,4 +56,13 @@ public class PlayerManager : MonoBehaviour
             OnFreezePlayer(time);
         }
     }
+
+    public event Action<ToolType> OnChangeTool;
+    public void ChangeTool(ToolType tt)
+    {
+        if(OnChangeTool != null)
+        {
+            OnChangeTool(tt);
+        }
+    }
 }

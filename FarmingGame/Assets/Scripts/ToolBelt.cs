@@ -138,6 +138,7 @@ public class ToolBelt : MonoBehaviour
         }
 
         UIManager.uiManager.ToolChange(activeTool.type, activeTool.crop.ToString());
+        PlayerManager.playerManager.ChangeTool(activeTool.type);
     }
 
     public void AddCropToSeedBag(CropType crop)
