@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
+        canOpenInventory = true;
         uiManager = this;
     }
 

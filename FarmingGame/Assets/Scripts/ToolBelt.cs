@@ -13,6 +13,11 @@ public class ToolBelt : MonoBehaviour
     public LayerMask tile;
     int currentSeed;
 
+    //Animations
+    public Animator anim;
+    bool toolSwing; 
+    bool toolPour;
+
     private void Start()
     {
         activeTool = hoeTool;
@@ -77,8 +82,11 @@ public class ToolBelt : MonoBehaviour
                 {
                     if (parent.transform.GetComponent<Tile>().isUnlocked)
                     {
-                        parent.transform.GetComponent<Tile>().TillTile();
-                        Debug.Log("Hit Tile");
+                        if (!toolSwing)
+                        {
+                            StartCoroutine(TillGround(parent));
+                            StartCoroutine(ToolSwing());
+                        }
                     }
                 }
             }
@@ -102,8 +110,11 @@ public class ToolBelt : MonoBehaviour
 
                 if(parent.transform.GetComponent<Tile>().isTilled == true && parent.transform.GetComponent<Tile>().hasCrops == false)
                 {
-                    parent.transform.GetComponent<Tile>().PlantCrops(activeTool.cropPlot);
-                    Debug.Log("Planted " + activeTool.crop.ToString());
+                    if (!toolPour) 
+                    {
+                        StartCoroutine(PlantSeed(parent));
+                        StartCoroutine(ToolPour());
+                    }
                 }
             }
         }
@@ -127,5 +138,47 @@ public class ToolBelt : MonoBehaviour
         }
 
         UIManager.uiManager.ToolChange(activeTool.type, activeTool.crop.ToString());
+    }
+
+    public void AddCropToSeedBag(CropType crop)
+    {
+
+    }
+
+    IEnumerator TillGround(Transform parent)
+    {
+        yield return new WaitForSeconds(0.6f);
+        parent.transform.GetComponent<Tile>().TillTile();
+    }
+
+    IEnumerator PlantSeed(Transform parent)
+    {
+        yield return new WaitForSeconds(2);
+        parent.transform.GetComponent<Tile>().PlantCrops(activeTool.cropPlot);
+        Debug.Log("Planted " + activeTool.crop.ToString());
+    }
+
+    IEnumerator ToolSwing()
+    {
+        toolSwing = true;
+        anim.SetBool("isSwinging", true);
+
+        PlayerManager.playerManager.FreezePlayer(1f);
+        yield return new WaitForSeconds(1f);
+
+        toolSwing = false;
+        anim.SetBool("isSwinging", false);
+    }
+
+    IEnumerator ToolPour()
+    {
+        toolPour = true;
+        anim.SetBool("isPouring", true);
+
+        PlayerManager.playerManager.FreezePlayer(2f);
+        yield return new WaitForSeconds(2f);
+
+        toolPour = false;
+        anim.SetBool("isPouring", false);
     }
 }

@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937a71d11a605ed4585c23d3b6a85c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visitorCooldown: 10
+  visitorCooldown: 60
   visitors:
   - {fileID: 11400000, guid: e42e64392e5618242a2d511d74f6c876, type: 2}
   - {fileID: 11400000, guid: 2563b81cc0b276c4894be6ae2e57efc3, type: 2}

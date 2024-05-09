@@ -10,7 +10,7 @@ public class PlotManager : MonoBehaviour
 
     private void Awake()
     {
-        plotPrice = 500;
+        plotPrice = 100;
         price.text = "Current Price: " + plotPrice;
     }
     public void UpdatePrice()

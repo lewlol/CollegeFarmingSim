@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4069057160530472784}
   - component: {fileID: 4736119787751657220}
   - component: {fileID: 1943136134737287569}
+  - component: {fileID: 5595241444926435079}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -122,3 +123,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plotPrice: 0
   price: {fileID: 0}
+--- !u!114 &5595241444926435079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363995475921465833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743cb129ccef30e49a32fd7bec37b6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewards:
+  - {fileID: 11400000, guid: bc2a582d42d57ae40b8549ae4eabcd31, type: 2}
+  - {fileID: 11400000, guid: 0cfd669ad8791274c95a04e028cea99e, type: 2}
+  - {fileID: 11400000, guid: c9371c32851245c4a8a7ceea94e81733, type: 2}
+  - {fileID: 11400000, guid: 1e4d8fcaf5a158148973a8380222c4bf, type: 2}
+  - {fileID: 11400000, guid: 47016b9aaa88e484d8d941a29ed7398c, type: 2}
+  - {fileID: 11400000, guid: 1c02561d063bf79419dab6799f1a9338, type: 2}
+  - {fileID: 11400000, guid: 91e5ae0ff21cb964fa7d744be5265301, type: 2}
+  currentReward: 0

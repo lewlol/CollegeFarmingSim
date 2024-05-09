@@ -16,57 +16,68 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
     bool running;
+
+    bool canMove;
+
+    public AudioSource walkingAudio;
     private void Start()
     {
+        canMove = true;
         controller = GetComponent<CharacterController>();
         cam = Camera.main.transform;
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        PlayerManager.playerManager.OnFreezePlayer += FreezePlayer;
     }
 
     private void Update()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-
-        Run();
-
-        if(direction != Vector3.zero)
+        if (canMove)
         {
-            animator.SetBool("isWalking", true);
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
+            Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-            if (running)
+            Run();
+
+            if (direction != Vector3.zero)
             {
-                animator.SetBool("isRunning", true);
+                animator.SetBool("isWalking", true);
+
+                if (running)
+                {
+                    animator.SetBool("isRunning", true);
+                }
+                else
+                {
+                    animator.SetBool("isRunning", false);
+                }
             }
             else
             {
+                animator.SetBool("isWalking", false);
                 animator.SetBool("isRunning", false);
+                walkingAudio.Stop();
             }
-        }
-        else
-        {
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isRunning", false);
-        }
 
-        if (direction.magnitude >= 0.1f)
-        {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            if (direction.magnitude >= 0.1f)
+            {
+                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+                transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            if (running)
-            {
-                finalSpeed = speed * 1.5f;
+                if (running)
+                {
+                    finalSpeed = speed * 1.5f;
+                }
+                else
+                {
+                    finalSpeed = speed;
+                }
+                moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                controller.Move(moveDir.normalized * finalSpeed * Time.deltaTime);
             }
-            else
-            {
-                finalSpeed = speed;
-            }
-            moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * finalSpeed * Time.deltaTime);
         }
     }
 
@@ -80,5 +91,16 @@ public class PlayerMovement : MonoBehaviour
         {
             running = false;
         }
+    }
+
+    private void FreezePlayer(float time)
+    {
+        StartCoroutine(Freeze(time));
+    }
+    IEnumerator Freeze(float time)
+    {
+        canMove = false;
+        yield return new WaitForSeconds(time);
+        canMove = true;
     }
 }

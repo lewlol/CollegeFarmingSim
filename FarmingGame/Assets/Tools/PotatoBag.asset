@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32803c865524f404ba6ff01b009986a5, type: 3}
+  m_Name: PotatoBag
+  m_EditorClassIdentifier: 
+  toolName: Potato
+  prefab: {fileID: 0}
+  type: 2
+  level: 0
+  crop: 4
+  cropPlot: {fileID: 8335538349255398180, guid: d6c3ebb31f975954cbc03f642058fd54,
+    type: 3}

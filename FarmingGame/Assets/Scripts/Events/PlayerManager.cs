@@ -47,4 +47,13 @@ public class PlayerManager : MonoBehaviour
             OnAddFarmPoints(amount);
         }
     }
+
+    public event Action<float> OnFreezePlayer;
+    public void FreezePlayer(float time)
+    {
+        if(OnFreezePlayer != null)
+        {
+            OnFreezePlayer(time);
+        }
+    }
 }

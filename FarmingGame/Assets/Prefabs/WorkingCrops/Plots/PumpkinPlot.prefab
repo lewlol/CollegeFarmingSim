@@ -156,6 +156,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -244,6 +249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -334,6 +344,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -422,6 +437,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -512,6 +532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -600,6 +625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -690,6 +720,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -778,6 +813,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -868,6 +908,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -956,6 +1001,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1046,6 +1096,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1134,6 +1189,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1224,6 +1284,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1312,6 +1377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1402,6 +1472,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1490,6 +1565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1580,6 +1660,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1668,6 +1753,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1758,6 +1848,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1846,6 +1941,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1936,6 +2036,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2024,6 +2129,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2114,6 +2224,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2203,6 +2318,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinSpot
       objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2291,6 +2411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PumpkinSpot (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8878898741566920200, guid: ed97a29cc605d544f8f4962951b26b60,
+        type: 3}
+      propertyPath: pumpkinChance
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

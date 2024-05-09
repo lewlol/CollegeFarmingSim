@@ -359,7 +359,6 @@ GameObject:
   - component: {fileID: 7302285015816084304}
   - component: {fileID: 4519367325859479727}
   - component: {fileID: 3084714513659845944}
-  - component: {fileID: 5541123170944847187}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -443,12 +442,11 @@ MonoBehaviour:
   hoeTool: {fileID: 11400000, guid: 6d5d112664de5ee4d9229d2161341bc5, type: 2}
   seedTool:
   - {fileID: 11400000, guid: 0d0c83077d4d4f447bb24f540481b6ad, type: 2}
-  - {fileID: 11400000, guid: bd8e1b2f750d78643a91eb89a081edca, type: 2}
-  - {fileID: 11400000, guid: 68bea787e951aa2449bdc8e857b002db, type: 2}
   activeTool: {fileID: 0}
   tile:
     serializedVersion: 2
     m_Bits: 64
+  anim: {fileID: 5686808012393805160}
 --- !u!114 &552204460470702523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,19 +526,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5541123170944847187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8607500489629889426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0640e1ed039a61541a826f34f99ffa68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 5686808012393805160}
 --- !u!1001 &175238923817304827
 PrefabInstance:
   m_ObjectHideFlags: 0
