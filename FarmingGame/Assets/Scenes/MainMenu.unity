@@ -5805,7 +5805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334533123}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13567448, y: -0.000000034094565, z: 0.0000000046689337, w: 0.9907535}
+  m_LocalRotation: {x: 0.13567448, y: 0.000000034094565, z: -0.0000000046689337, w: 0.9907535}
   m_LocalPosition: {x: 0, y: 36, z: -110}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8499,7 +8499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &539120322
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11728,7 +11728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822910973}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13567446, y: -0.000000017047281, z: 0.0000000023344662, w: 0.9907535}
+  m_LocalRotation: {x: 0.13567446, y: 0.000000017047288, z: -0.000000002334467, w: 0.9907535}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -23626,7 +23626,9 @@ MonoBehaviour:
     Rubber boot by Poly by Google [CC-BY] via Poly Pizza
 
     Debris
-    Pile by Quaternius'
+    Pile by Quaternius
+
+    Fishing net by Poly by Google [CC-BY] via Poly Pizza'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 393b85bd531de404bbafd7bcdf2be93b, type: 2}
   m_sharedMaterial: {fileID: 2789736533774851667, guid: 393b85bd531de404bbafd7bcdf2be93b,
