@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66cc150b27990714a89066696e5f48f0, type: 3}
   m_Name: Pumpkin
   m_EditorClassIdentifier: 
-  rewardName: Unlock Pumpkin
-  fpRequired: 50
-  coinReward: 0
+  rewardName: Pumpkin Crop
+  fpCost: 0
   cropUnlock: 3
+  isUnlocked: 0

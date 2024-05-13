@@ -10,5 +10,14 @@ public class FarmPointReward : ScriptableObject
     public int fpCost;
 
     [Header("Rewards")]
+    public RewardType rewardType;
     public CropType cropUnlock;
+
+    [Header("Background")]
+    public bool isUnlocked;
+
+    public enum RewardType
+    {
+        Crop, Boots, Tool
+    }
 }

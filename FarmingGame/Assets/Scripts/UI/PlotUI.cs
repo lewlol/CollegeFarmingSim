@@ -37,15 +37,8 @@ public class PlotUI : MonoBehaviour
             image.color = Color.red;
         }
 
-        //If Unlocked with no Crops
-        if (tiles[0].isUnlocked && !tiles[0].hasCrops)
-        {
-            //Make it Yellow
-            image.color = Color.yellow;
-        }
-
         //If Unlocked with Crops
-        if (tiles[0].isUnlocked && tiles[0].hasCrops)
+        if (tiles[0].isUnlocked)
         {
             //Make it Green
             image.color = Color.green;
