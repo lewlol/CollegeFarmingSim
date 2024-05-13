@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
     public GameObject optionsMenu;
+    public GameObject creditsMenu;
 
     public GameObject fade;
     public void Play()
@@ -20,6 +21,12 @@ public class Buttons : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    
+    public void Credits()
+    {
+        bool creditsOpen = creditsMenu.activeSelf;
+        creditsMenu.SetActive(!creditsOpen);
     }
 
     IEnumerator PlayGame()

@@ -7,9 +7,8 @@ public class FarmPointReward : ScriptableObject
 {
     [Header("Info")]
     public string rewardName;
-    public int fpRequired;
+    public int fpCost;
 
     [Header("Rewards")]
-    public int coinReward;
     public CropType cropUnlock;
 }
