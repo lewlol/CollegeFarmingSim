@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public bool canOpenLaptop;
     public bool canOpenTrade;
     public bool canOpenBoatTrade;
+    public bool canOpenSellingMenu;
 
     private void Awake()
     {
@@ -107,6 +108,24 @@ public class UIManager : MonoBehaviour
         if(onDisableUnlockText != null)
         {
             onDisableUnlockText();
+        }
+    }
+
+    public event Action<int> onOpenSellingMenu;
+    public void OpenSellingMenu(int amount)
+    {
+        if(onOpenSellingMenu != null)
+        {
+            onOpenSellingMenu(amount);
+        }
+    }
+
+    public event Action onCloseSellingMenu;
+    public void CloseSellingMenu()
+    {
+        if(onCloseSellingMenu != null)
+        {
+            onCloseSellingMenu();
         }
     }
 }

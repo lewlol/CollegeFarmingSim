@@ -93,8 +93,8 @@ public class Boat : MonoBehaviour
 
     public void SetRewards()
     {
-        totalCoins = (firstCropAmount * firstCrop.cropPrice) + (secondCropAmount * secondCrop.cropPrice) + (thirdCropAmount * thirdCrop.cropPrice);
-        totalPoints = (firstCropAmount * firstCrop.cropPoints) + (secondCropAmount * secondCrop.cropPoints) + (thirdCropAmount * thirdCrop.cropPoints);
+        totalCoins = (firstCropAmount * firstCrop.cropPrice) + (secondCropAmount * secondCrop.cropPrice) + (thirdCropAmount * thirdCrop.cropPrice) * 2;
+        totalPoints = (firstCropAmount * firstCrop.cropPoints) + (secondCropAmount * secondCrop.cropPoints) + (thirdCropAmount * thirdCrop.cropPoints) * 2;
     }
 
     public void OpenMenu()

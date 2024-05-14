@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3427478671fbf3a4e93ee60ba59d298e,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1787,7 +1788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158283945}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09808884, y: 0.00000001712341, z: -0.0000000016877545, w: 0.9951777}
+  m_LocalRotation: {x: 0.09808884, y: -0.000000017123403, z: 0.0000000016877538, w: 0.9951777}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8499,7 +8500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &539120322
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23574,7 +23575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 9, y: 68}
   m_SizeDelta: {x: 1200, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1720550410
@@ -23597,38 +23598,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The Team
-
-    Lewis H - Programming, UI Art, Music, Sound
-
-    Jacob U
-    - Modelling, Animation, Music
-
-    Kieran K - Modelling
-
-    Daniel C - Modelling
-
-
-
-    External
-    Models:
-
-    World Tiles by KayKit Medieval Pack
-
-    Container Ship by Alex
-    Safayan [CC-BY] via Poly Pizza
-
-    Market Stand by Quaternius
-
-    Dock Long
-    by Quaternius
-
-    Rubber boot by Poly by Google [CC-BY] via Poly Pizza
-
-    Debris
-    Pile by Quaternius
-
-    Fishing net by Poly by Google [CC-BY] via Poly Pizza'
+  m_text: "The Team\nLewis H - Programming, UI Art, Music, Sound\nJacob U - Modelling,
+    Animation, Music\nKieran K - Modelling\nDaniel C - Modelling\n\nExternal Models:\nWorld
+    Tiles by KayKit Medieval Pack\nContainer Ship by Alex Safayan [CC-BY] via Poly
+    Pizza\nMarket Stand by Quaternius\nDock Long by Quaternius\nDebris Pile by Quaternius\nFishing
+    net by Poly by Google [CC-BY] via Poly Pizza\nTop hat by jeremy [CC-BY] via Poly
+    Pizza\nSail Boat by Quaternius\nMilitary Boat by Zsky [CC-BY] via Poly Pizza\nTugBoat
+    by Some \u201CRandom\u201D Person [CC-BY] via Poly"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 393b85bd531de404bbafd7bcdf2be93b, type: 2}
   m_sharedMaterial: {fileID: 2789736533774851667, guid: 393b85bd531de404bbafd7bcdf2be93b,
