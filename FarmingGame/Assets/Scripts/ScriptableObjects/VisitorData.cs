@@ -10,7 +10,7 @@ public class VisitorData : ScriptableObject
     public Material visitorMat;
 
     [Header("Visitor Stats")]
-    public float generocity;
+    public int generocity;
     public Rarity rarity;
     public int farmPointsUnlocked;
 

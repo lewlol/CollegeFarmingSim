@@ -49,6 +49,7 @@ public class Tile : MonoBehaviour
         isUnlocked = true;
         nature.SetActive(false);
         GuideIcon();
+        PlayerManager.playerManager.AddFarmWorth(20);
     }
 
     public void PlantCrops(GameObject plot)

@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4f85237f6261748ba55119f23861b2, type: 3}
-  m_Name: Frog
+  m_Name: Centipede
   m_EditorClassIdentifier: 
-  critterName: Frog
+  critterName: Centipede
   critterDescription: 
-  critterPrefab: {fileID: 0}
-  critterSpeed: 0
-  critterAI: 2
-  critterCrop: 2
+  critterPrefab: {fileID: 6532407159822367798, guid: 186555cbdca7af243a1c0d86332aa550,
+    type: 3}
+  critterSpeed: 1
+  critterAI: 0
+  critterCrop: 4

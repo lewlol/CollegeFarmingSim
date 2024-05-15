@@ -2599,6 +2599,7 @@ MonoBehaviour:
   hoeHighlight: {fileID: 3519013748171163323}
   axeHighlight: {fileID: 9186169474125867432}
   seedHighlight: {fileID: 7476735306071065091}
+  netHighlight: {fileID: 9018034538023719728}
   seedIcon: {fileID: 8330390523382699693}
 --- !u!1 &3228327486913069506
 GameObject:

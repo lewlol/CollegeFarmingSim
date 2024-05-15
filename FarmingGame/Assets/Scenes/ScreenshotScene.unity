@@ -353,6 +353,89 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1001 &669664960
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8045511
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.29184532
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4883362
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.17044522
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -39.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -62.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_Name
+      value: Jelly Fish Net
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6cbea61f53f703b41b38b5e5cdd6849d, type: 3}
 --- !u!1001 &706460070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1542,3 +1625,4 @@ SceneRoots:
   - {fileID: 1445688198}
   - {fileID: 1633195203}
   - {fileID: 1405445067}
+  - {fileID: 669664960}

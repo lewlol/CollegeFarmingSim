@@ -8500,7 +8500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &539120322
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23604,7 +23604,9 @@ MonoBehaviour:
     Pizza\nMarket Stand by Quaternius\nDock Long by Quaternius\nDebris Pile by Quaternius\nFishing
     net by Poly by Google [CC-BY] via Poly Pizza\nTop hat by jeremy [CC-BY] via Poly
     Pizza\nSail Boat by Quaternius\nMilitary Boat by Zsky [CC-BY] via Poly Pizza\nTugBoat
-    by Some \u201CRandom\u201D Person [CC-BY] via Poly"
+    by Some \u201CRandom\u201D Person [CC-BY] via Poly\nJellyfish Net by Yanez Designs\nLadybug
+    by Poly by Google [CC-BY] via Poly Pizza\nCentipede by Poly by Google [CC-BY]
+    via Poly Pizza"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 393b85bd531de404bbafd7bcdf2be93b, type: 2}
   m_sharedMaterial: {fileID: 2789736533774851667, guid: 393b85bd531de404bbafd7bcdf2be93b,
@@ -23632,8 +23634,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

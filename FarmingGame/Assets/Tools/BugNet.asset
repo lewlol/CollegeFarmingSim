@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a4f85237f6261748ba55119f23861b2, type: 3}
-  m_Name: Slug
+  m_Script: {fileID: 11500000, guid: 32803c865524f404ba6ff01b009986a5, type: 3}
+  m_Name: BugNet
   m_EditorClassIdentifier: 
-  critterName: Slug
-  critterDescription: 
-  critterPrefab: {fileID: 0}
-  critterSpeed: 0
-  critterAI: 0
-  critterCrop: 5
+  toolName: Bug Net
+  prefab: {fileID: 0}
+  type: 3
+  level: 0
+  crop: 0
+  cropPlot: {fileID: 0}

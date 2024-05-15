@@ -7,6 +7,7 @@ public class ToolBelt : MonoBehaviour
     public Tool axeTool;
     public Tool hoeTool;
     public Tool[] seedTool;
+    public Tool netTool;
 
     public Tool activeTool;
 
@@ -38,6 +39,9 @@ public class ToolBelt : MonoBehaviour
                     break;
                 case ToolType.Seedbag:
                     UseSeedBag(); 
+                    break;
+                case ToolType.Net:
+                    UseNet();
                     break;
             }
         }
@@ -93,6 +97,14 @@ public class ToolBelt : MonoBehaviour
         }
     }
 
+    void UseNet()
+    {
+        if (!toolSwing)
+        {
+            StartCoroutine(ToolSwing());
+            StartCoroutine(NetCollider());
+        }
+    }
     private void UseAxe()
     {
 
@@ -137,6 +149,11 @@ public class ToolBelt : MonoBehaviour
             activeTool = seedTool[currentSeed];
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            activeTool = netTool;
+        }
+
         UIManager.uiManager.ToolChange(activeTool.type, activeTool.crop.ToString());
         PlayerManager.playerManager.ChangeTool(activeTool.type);
     }
@@ -157,6 +174,12 @@ public class ToolBelt : MonoBehaviour
         yield return new WaitForSeconds(2);
         parent.transform.GetComponent<Tile>().PlantCrops(activeTool.cropPlot);
         Debug.Log("Planted " + activeTool.crop.ToString());
+    }
+
+    IEnumerator NetCollider()
+    {
+        yield return new WaitForSeconds(0.5f);
+        PlayerManager.playerManager.CatchCritter();
     }
 
     IEnumerator ToolSwing()

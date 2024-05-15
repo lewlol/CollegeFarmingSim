@@ -24,21 +24,11 @@ public class CritterSpawner : MonoBehaviour
     public void ChooseCritter(CropType ct)
     {
         int c = Random.Range(0, critters.Length);
-        if (critters[c].critterCrop == ct)
-        {
-            activeCritter = critters[c];
-        }
-        else if (critters[c].critterCrop == CropType.All)
-        {
-            activeCritter = critters[c];
-        }
-        else
-        {
-            ChooseCritter(ct);
-        }
+        activeCritter = critters[c];
     }
     public void SpawnCritter(CritterData cd, Vector3 pos)
     {
-        Debug.Log("Spawned " + cd.critterName);
+        Instantiate(cd.critterPrefab, pos, Quaternion.identity);
+        PlayerManager.playerManager.RemoveFarmWorth(5);
     }
 }

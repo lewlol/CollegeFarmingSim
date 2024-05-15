@@ -217,6 +217,7 @@ public class Boat : MonoBehaviour
     {
         PlayerManager.playerManager.AddCoins(totalCoins);
         PlayerManager.playerManager.AddFarmPoints(totalPoints);
+        PlayerManager.playerManager.AddFarmWorth(75);
 
         UIManager.uiManager.CloseBoatUI();
         ResetTrade();
@@ -235,6 +236,8 @@ public class Boat : MonoBehaviour
         debris.SetActive(false);
         docks.SetActive(true);
         UIManager.uiManager.DisableUnlockText();
+
+        PlayerManager.playerManager.AddFarmWorth(50);
     }
 
     private void ResetTrade()

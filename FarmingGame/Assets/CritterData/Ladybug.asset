@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4f85237f6261748ba55119f23861b2, type: 3}
-  m_Name: Fly
+  m_Name: Ladybug
   m_EditorClassIdentifier: 
-  critterName: Fly
+  critterName: LadyBug
   critterDescription: 
-  critterPrefab: {fileID: 0}
-  critterSpeed: 0
-  critterAI: 1
+  critterPrefab: {fileID: 6519757996482165373, guid: 00d32198a0395ac4d881dfc6703bf66a,
+    type: 3}
+  critterSpeed: 2
+  critterAI: 0
   critterCrop: 2

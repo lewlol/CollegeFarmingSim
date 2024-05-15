@@ -65,4 +65,31 @@ public class PlayerManager : MonoBehaviour
             OnChangeTool(tt);
         }
     }
+
+    public event Action<int> OnAddFarmWorth;
+    public void AddFarmWorth(int amount)
+    {
+        if(OnAddFarmWorth != null)
+        {
+            OnAddFarmWorth(amount);
+        }
+    }
+
+    public event Action<int> OnRemoveFarmWorth;
+    public void RemoveFarmWorth(int amount)
+    {
+        if(OnRemoveFarmWorth != null)
+        {
+            OnRemoveFarmWorth(amount);
+        }
+    }
+
+    public event Action OnCatchCritter;
+    public void CatchCritter()
+    {
+        if(OnCatchCritter != null)
+        {
+            OnCatchCritter();
+        }
+    }
 }

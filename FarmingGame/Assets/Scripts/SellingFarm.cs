@@ -10,6 +10,11 @@ public class SellingFarm : MonoBehaviour
 
     public PlayerStats1 stats;
 
+    private void Start()
+    {
+        PlayerManager.playerManager.OnAddFarmWorth += IncreaseFarmWorth;
+        PlayerManager.playerManager.OnRemoveFarmWorth += DecreaseFarmWorth;
+    }
     public void IncreaseFarmWorth(int amount)
     {
         farmWorth += amount;

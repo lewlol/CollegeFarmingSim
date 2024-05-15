@@ -104,8 +104,10 @@ public class VisitorStand : MonoBehaviour
         askAmount = Random.Range(activeVisitor.minTradeAmount, activeVisitor.maxTradeAmount);
 
         //Rewards set for when accepting the trade
-        coinReward = askAmount * cd.cropPrice;
-        pointsReward = askAmount * cd.cropPoints;
+
+        int generocityBonus = (askAmount / 100) * activeVisitor.generocity;
+        coinReward = (askAmount * cd.cropPrice) + generocityBonus;
+        pointsReward = (askAmount * cd.cropPoints) + generocityBonus;
 
         ct = cd.cropType;
     }
@@ -122,8 +124,6 @@ public class VisitorStand : MonoBehaviour
         //Spawn Visitor Model
         currentVisitorObject = Instantiate(visitorPrefab, visitorLocation.position, new Quaternion(0, 90, 0, 0));
         currentVisitorObject.GetComponentInChildren<SkinnedMeshRenderer>().material = activeVisitor.visitorMat;
-
-        //Visitor Generocity Offset (DO THIS LATER WITH VISITOR lOGBOOK AND TRACKING VISITOR TRADED TIMES)
     }
 
     public void OpenMenu()
@@ -153,6 +153,8 @@ public class VisitorStand : MonoBehaviour
 
     public void Accept()
     {
+        activeVisitor.generocity++;
+
         Inventory inventory = player.GetComponent<Inventory>();
         switch (ct)
         { 
@@ -203,6 +205,9 @@ public class VisitorStand : MonoBehaviour
 
             //Remove Model
             Destroy(currentVisitorObject);
+
+            //Add some Farm Worth
+            PlayerManager.playerManager.AddFarmWorth(5);
         }
     }
 

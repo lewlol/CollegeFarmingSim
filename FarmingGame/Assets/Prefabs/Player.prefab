@@ -203,6 +203,7 @@ Transform:
   - {fileID: 5520001233440683510}
   - {fileID: 4230931105380079433}
   - {fileID: 5368263672968691291}
+  - {fileID: 7639743282389124812}
   m_Father: {fileID: 2007266319469657395}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5013024948738827566
@@ -220,6 +221,7 @@ MonoBehaviour:
   hoe: {fileID: 7139835739128094729}
   axe: {fileID: 7745496556335915866}
   seedBag: {fileID: 488368863926059670}
+  net: {fileID: 7011544578952748150}
 --- !u!1 &4657427133865616788
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +494,7 @@ MonoBehaviour:
   hoeTool: {fileID: 11400000, guid: 6d5d112664de5ee4d9229d2161341bc5, type: 2}
   seedTool:
   - {fileID: 11400000, guid: 0d0c83077d4d4f447bb24f540481b6ad, type: 2}
+  netTool: {fileID: 11400000, guid: 96c7ce751f1a4a64f8e805964945800f, type: 2}
   activeTool: {fileID: 0}
   tile:
     serializedVersion: 2
@@ -863,6 +866,106 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a82046cbe7babc349b26e0fb6f5c7cc0,
     type: 3}
   m_PrefabInstance: {fileID: 7822499805950653991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7894646820838990119
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2817640930320960577}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7499996
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7500001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7499996
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.39
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.06
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5410667
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.49234664
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.41012585
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5446452
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 72.44
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_Name
+      value: Jelly Fish Net
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6cbea61f53f703b41b38b5e5cdd6849d, type: 3}
+--- !u!1 &7011544578952748150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7894646820838990119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7639743282389124812 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6cbea61f53f703b41b38b5e5cdd6849d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7894646820838990119}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8777549116254292980
 PrefabInstance:

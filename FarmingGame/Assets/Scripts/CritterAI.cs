@@ -5,19 +5,20 @@ using UnityEngine;
 public class CritterAI : MonoBehaviour
 {
     public float runRadius;
-    public float searchCropRadius;
-    public float eatRadius;
 
     public CritterData cd;
     CharacterController charcontrol;
     GameObject player;
-    GameObject crop;
+
+    float timer;
 
     private void Awake()
     {
         player = GameObject.Find("Player");
         charcontrol = GetComponent<CharacterController>();
+        timer = 120;
     }
+
     private void Update()
     {
         float playerDistance = Vector3.Distance(transform.position, player.transform.position);
@@ -25,9 +26,12 @@ public class CritterAI : MonoBehaviour
         if (playerDistance < runRadius)
         {
             RunFromPlayer();
-        }else if(playerDistance > runRadius && playerDistance < searchCropRadius)
+        }
+
+        float countdown = timer -= Time.deltaTime;
+        if(countdown <= 0)
         {
-            SearchForCrop();
+            Destroy(gameObject);
         }
     }
     private void RunFromPlayer()
@@ -36,25 +40,18 @@ public class CritterAI : MonoBehaviour
         charcontrol.Move(transform.forward * cd.critterSpeed * Time.deltaTime);
     }
 
-    private void SearchForCrop()
-    {
-    }
-
-    private void EatCrop()
-    {
-    }
-
-
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, runRadius);
+    }
 
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, searchCropRadius);
-
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, eatRadius);
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Net")
+        {
+            Destroy(gameObject);
+            PlayerManager.playerManager.AddFarmWorth(10);
+        }
     }
 }

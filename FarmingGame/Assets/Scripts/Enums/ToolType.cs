@@ -1,4 +1,4 @@
 public enum ToolType
 {
-    Hoe, Axe, Seedbag
+    Hoe, Axe, Seedbag, Net
 }

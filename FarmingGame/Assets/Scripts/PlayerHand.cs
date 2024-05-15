@@ -7,6 +7,7 @@ public class PlayerHand : MonoBehaviour
     public GameObject hoe;
     public GameObject axe;
     public GameObject seedBag;
+    public GameObject net;
 
     private void Start()
     {
@@ -21,16 +22,25 @@ public class PlayerHand : MonoBehaviour
                 hoe.SetActive(true);
                 seedBag.SetActive(false);
                 axe.SetActive(false);
+                net.SetActive(false);
                 break;
             case ToolType.Axe:
                 hoe.SetActive(false); 
                 seedBag.SetActive(false);
                 axe.SetActive(true);
+                net.SetActive(false);
                 break;
             case ToolType.Seedbag:
                 seedBag.SetActive(true);
                 hoe.SetActive(false);
                 axe.SetActive(false);
+                net.SetActive(false);
+                break;
+            case ToolType.Net:
+                hoe.SetActive(false);
+                seedBag.SetActive(false);
+                axe.SetActive(false);
+                net.SetActive(true);
                 break;
         }
     }
