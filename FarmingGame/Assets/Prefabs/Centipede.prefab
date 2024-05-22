@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1337749596838749422}
   - component: {fileID: 5264750566601341991}
   - component: {fileID: 1038487468991196782}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Centipede
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,10 +147,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8135253815291735496, guid: f4b89778b3385a945ba952ee62cada0a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f4b89778b3385a945ba952ee62cada0a,
         type: 3}
       propertyPath: m_Name
       value: Mesh_Centipede
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f4b89778b3385a945ba952ee62cada0a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
