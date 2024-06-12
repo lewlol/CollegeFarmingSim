@@ -128,4 +128,13 @@ public class UIManager : MonoBehaviour
             onCloseSellingMenu();
         }
     }
+
+    public event Action<string> OnUpdateTutorial;
+    public void UpdateTutorial(string t)
+    {
+        if(OnUpdateTutorial != null)
+        {
+            OnUpdateTutorial(t);
+        }
+    }
 }

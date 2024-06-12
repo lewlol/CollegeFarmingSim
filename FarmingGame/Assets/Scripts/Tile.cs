@@ -42,6 +42,8 @@ public class Tile : MonoBehaviour
         isWater = false;
 
         GuideIcon();
+
+        PlayerManager.playerManager.TillGround();
     }
 
     public void ClearPlot()
@@ -50,6 +52,8 @@ public class Tile : MonoBehaviour
         nature.SetActive(false);
         GuideIcon();
         PlayerManager.playerManager.AddFarmWorth(20);
+
+        PlayerManager.playerManager.BuyPlot();
     }
 
     public void PlantCrops(GameObject plot)
@@ -58,6 +62,8 @@ public class Tile : MonoBehaviour
         hasCrops = true;
 
         GuideIcon();
+
+        PlayerManager.playerManager.PlantCrop();
     }
 
     public void GuideIcon()

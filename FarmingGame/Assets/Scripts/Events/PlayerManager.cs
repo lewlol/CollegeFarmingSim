@@ -92,4 +92,40 @@ public class PlayerManager : MonoBehaviour
             OnCatchCritter();
         }
     }
+
+    public event Action OnTillGround;
+    public void TillGround()
+    {
+        if(OnTillGround != null)
+        {
+            OnTillGround();
+        }
+    }
+
+    public event Action OnPlantCrop;
+    public void PlantCrop()
+    {
+        if(OnPlantCrop != null)
+        {
+            OnPlantCrop();
+        }
+    }
+
+    public event Action OnBuyPlot;
+    public void BuyPlot()
+    {
+        if(OnBuyPlot != null)
+        {
+            OnBuyPlot();
+        }
+    }
+
+    public event Action OnAcceptTrade;
+    public void AcceptTrade()
+    {
+        if(OnAcceptTrade != null)
+        {
+            OnAcceptTrade();
+        }
+    }
 }

@@ -208,6 +208,9 @@ public class VisitorStand : MonoBehaviour
 
             //Add some Farm Worth
             PlayerManager.playerManager.AddFarmWorth(5);
+
+            //Tutorial
+            PlayerManager.playerManager.AcceptTrade();
         }
     }
 
